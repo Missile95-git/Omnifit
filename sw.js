@@ -1,12 +1,10 @@
-const CACHE = 'omnifit-v2';
+const CACHE = 'omnifit-v3';
 const ASSETS = [
   '/omnifit/',
   '/omnifit/index.html',
   '/omnifit/app.js',
   '/omnifit/style.css',
-  '/omnifit/manifest.json',
-  '/omnifit/icons/icon-192.png',
-  '/omnifit/icons/icon-512.png'
+  '/omnifit/manifest.json'
 ];
 
 self.addEventListener('install', e => {

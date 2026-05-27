@@ -1,10 +1,12 @@
-const CACHE = 'omnifit-v1';
+const CACHE = 'omnifit-v2';
 const ASSETS = [
-  './',
-  './index.html',
-  './app.js',
-  './style.css',
-  './manifest.json'
+  '/omnifit/',
+  '/omnifit/index.html',
+  '/omnifit/app.js',
+  '/omnifit/style.css',
+  '/omnifit/manifest.json',
+  '/omnifit/icons/icon-192.png',
+  '/omnifit/icons/icon-512.png'
 ];
 
 self.addEventListener('install', e => {
@@ -22,7 +24,7 @@ self.addEventListener('activate', e => {
 self.addEventListener('fetch', e => {
   e.respondWith(
     caches.match(e.request).then(r => r || fetch(e.request).catch(() =>
-      caches.match('./index.html')
+      caches.match('/omnifit/index.html')
     ))
   );
 });
